@@ -1,7 +1,10 @@
 /* Start Variables */
 :root {
-    --main-color: ;
-    --secondary-color: ;
+    --home-col: #dbdbdb;
+    --base-col1: #e93c70;
+    --sell-col: #d9d9d9;
+    --base-col2: #fefefe;
+    --padding-section: 25px;
 }
 /* End Variables */
 
@@ -54,3 +57,173 @@ ul {
 
 /* Start header */
 /* End header */
+
+/* Start home */
+.home {
+    padding: var(--padding-section) 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--home-col);
+}
+.home .container {
+    display: flex;
+    align-items: center;
+}
+.home .text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.home h1 {
+    font-weight: normal;
+    margin: 0;
+}
+.home h1 span {
+    font-weight: bold;
+}
+/* .home p {
+}
+.home b {
+} */
+.home b a {
+    color: black;
+}
+.home button {
+    background-color: var(--base-col1);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+}
+.home button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* .home .image {
+} */
+.home .image img {
+    width: 700px;
+}
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .home .image img {
+        width: 300px;
+    }
+}
+/* End home */
+
+/* start sell */
+.sell {
+    padding-bottom: var(--padding-section);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sell h1 {
+    background-color: var(--sell-col);
+    font-weight: normal;
+    text-align: center;
+    font-size: 42px;
+    width: 100%;
+    margin: auto 0;
+    padding: 100px 0;
+}
+.sell .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sell h1 span {
+    font-weight: bold;
+    font-size: 44px;
+}
+.sell .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -60px;
+    gap: 20px;
+}
+.sell .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 30px;
+    height: 400px;
+    padding: 10px;
+    position: relative;
+    background-color: var(--base-col2);
+    border-radius: 10px;
+}
+.sell .box i {
+    font-size: 50px;
+    margin-top: 60px;
+    position: relative;
+    right: 30px;
+    z-index: 2;
+}
+.sell .box::before {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: 25px;
+    z-index: 1;
+}
+.sell .box.one::before {
+    background-color: #eb668f;
+}
+.sell .box.two::before {
+    background-color: #67c6c8;
+}
+.sell .box.three::before {
+    background-color: #95b3db;
+}
+.sell .box.four::before {
+    background-color: #eba872;
+}
+/* .sell .box h3 {
+} */
+.sell .box p {
+    color: #787878;
+}
+.sell button {
+    background-color: var(--base-col2);
+    border: solid 2px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+}
+.sell button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+@media (max-width: 767px) {
+    .sell .boxes {
+        flex-direction: column;
+    }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    .sell .boxes {
+        flex-wrap: wrap;
+        gap: 40px 120px;
+    }
+    .sell .box {
+        width: 250px;
+    }
+}
+/* End sell */
