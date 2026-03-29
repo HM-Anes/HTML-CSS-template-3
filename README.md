@@ -2,9 +2,8 @@
 
 ---
 
-- This is:
-  - The first collaboration project with { Ali Taleb }
-  - The third Html & Css project
+- This is the first collaboration project
+    { HM-Anes 🤝 Ali Taleb }
 
 ---
  
