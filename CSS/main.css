@@ -26,6 +26,7 @@ ul {
     list-style: none;
 }
 .container {
+    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -57,89 +58,75 @@ ul {
 
 /* Start header */
 header {
-    width: 100%;
-    background-color: white;
-    padding: 13px;
-}
-header .continer {
+    padding: var(--padding-section) 0;
+    background-color: var(--base-col2);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    z-index: 2;
 }
-
-header .continer img {
-    width: 35px;
+header .container {
+    display: flex;
+    align-items: center;
 }
-header .continer i {
+/* image part */
+header .logo img {
+    width: 45px;
+    /* To match the spacing of logo from edges, such as links spacing */
+    position: relative;
+    left: 25px;
+}
+/* links part */
+header .links {
+    flex: 1; /* to take all valid space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* to put links part in the end of the space */
+}
+header .links i {
     font-size: 25px;
-    transition: 0.5s;
+    /* To match the spacing of links from edges, such as logo spacing */
+    position: relative;
+    right: 25px;
 }
-header .continer i ul::before {
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
-    position: absolute;
-    right: 18px;
-    top: -1px;
-}
-header .continer i ul {
-    /* list-style: none; */
-
-    list-style: none;
-    margin: 0;
-    padding: 28px;
-    background-color: rgba(70, 70, 70, 0.632);
-    position: absolute;
-    right: 0;
-    min-width: 180px;
+/* nav part */
+header .links nav {
+    position: relative;
     display: none;
-    z-index: 5;
-    border-radius: 10%;
-    /* bottom: 96px; */
-    /* top: 2px; */
-    transition: 0.5s;
 }
-header .continer i:hover ul {
+header .links i:hover ~ nav {
     display: block;
 }
-
-header .continer i ul li:not(:last-child) {
-    text-decoration: none;
-    margin-bottom: 11px;
-    z-index: 2;
+header nav::before {
+    content: "";
+    position: absolute;
+    border: solid 14px;
+    border-color: transparent transparent black transparent;
+    right: 25px;
+    bottom: -55px;
 }
-
-header .continer i ul li a {
+header nav ul {
+    padding: 28px;
+    background-color: rgba(70, 70, 70, 0.632);
+    border-radius: 10%;
+    width: 180px;
+    position: absolute;
+    right: 0px;
+    top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+header ul li a {
     text-decoration: none;
-    color: #ffffff;
-    transition: 0.5s;
-    font-size: 14px;
+    color: var(--base-col2);
+    font-size: 16px;
     font-style: normal;
+    transition: 0.5s;
 }
-@media (min-width: 767px) {
-    header .continer i ul li:not(:last-child) {
-        text-decoration: none;
-        margin-bottom: 35px;
-        z-index: 2;
-    }
-    header .continer i ul {
-        min-width: 218px;
-    }
-    header .continer i ul li a {
-        font-size: 18px;
-    }
-    header .continer i ul li a:hover {
-        font-size: 16px;
-    }
+header ul li a:hover {
+    font-size: 15px;
+    color: var(--base-col1);
 }
-header .continer i ul li a:hover {
-    font-size: 13px;
-    color: #ff4079;
-}
-
 /* End header */
 
 /* Start home */
@@ -153,6 +140,7 @@ header .continer i ul li a:hover {
     display: flex;
     align-items: center;
 }
+/* text part */
 .home .text {
     display: flex;
     flex-direction: column;
@@ -165,10 +153,6 @@ header .continer i ul li a:hover {
 .home h1 span {
     font-weight: bold;
 }
-/* .home p {
-}
-.home b {
-} */
 .home b a {
     color: black;
 }
@@ -186,13 +170,13 @@ header .continer i ul li a:hover {
     font-weight: bold;
     letter-spacing: 2px;
 }
-/* .home .image {
-} */
+/* image part */
 .home .image img {
     width: 700px;
 }
+/* media query */
 @media (max-width: 992px) {
-    .container {
+    .home .container {
         flex-direction: column;
     }
 }
@@ -228,6 +212,7 @@ header .continer i ul li a:hover {
     font-weight: bold;
     font-size: 44px;
 }
+/* Start boxes */
 .sell .boxes {
     display: flex;
     align-items: center;
@@ -236,6 +221,7 @@ header .continer i ul li a:hover {
     top: -60px;
     gap: 20px;
 }
+/* All boxes */
 .sell .box {
     display: flex;
     flex-direction: column;
@@ -265,20 +251,22 @@ header .continer i ul li a:hover {
     top: 25px;
     z-index: 1;
 }
+/* box one */
 .sell .box.one::before {
     background-color: #eb668f;
 }
+/* box two */
 .sell .box.two::before {
     background-color: #67c6c8;
 }
+/* box three */
 .sell .box.three::before {
     background-color: #95b3db;
 }
+/* box four */
 .sell .box.four::before {
     background-color: #eba872;
 }
-/* .sell .box h3 {
-} */
 .sell .box p {
     color: #787878;
 }
@@ -296,6 +284,7 @@ header .continer i ul li a:hover {
     font-weight: bold;
     letter-spacing: 2px;
 }
+/* media query */
 @media (max-width: 767px) {
     .sell .boxes {
         flex-direction: column;
@@ -311,3 +300,9 @@ header .continer i ul li a:hover {
     }
 }
 /* End sell */
+
+/* Start our way */
+/* End our way */
+
+/* Start consultation */
+/* End consultation */
