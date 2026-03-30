@@ -56,6 +56,90 @@ ul {
 /* End components */
 
 /* Start header */
+header {
+    width: 100%;
+    background-color: white;
+    padding: 13px;
+}
+header .continer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+header .continer img {
+    width: 35px;
+}
+header .continer i {
+    font-size: 25px;
+    transition: 0.5s;
+}
+header .continer i ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 18px;
+    top: -1px;
+}
+header .continer i ul {
+    /* list-style: none; */
+
+    list-style: none;
+    margin: 0;
+    padding: 28px;
+    background-color: rgba(70, 70, 70, 0.632);
+    position: absolute;
+    right: 0;
+    min-width: 180px;
+    display: none;
+    z-index: 5;
+    border-radius: 10%;
+    /* bottom: 96px; */
+    /* top: 2px; */
+    transition: 0.5s;
+}
+header .continer i:hover ul {
+    display: block;
+}
+
+header .continer i ul li:not(:last-child) {
+    text-decoration: none;
+    margin-bottom: 11px;
+    z-index: 2;
+}
+
+header .continer i ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+    font-size: 14px;
+    font-style: normal;
+}
+@media (min-width: 767px) {
+    header .continer i ul li:not(:last-child) {
+        text-decoration: none;
+        margin-bottom: 35px;
+        z-index: 2;
+    }
+    header .continer i ul {
+        min-width: 218px;
+    }
+    header .continer i ul li a {
+        font-size: 18px;
+    }
+    header .continer i ul li a:hover {
+        font-size: 16px;
+    }
+}
+header .continer i ul li a:hover {
+    font-size: 13px;
+    color: #ff4079;
+}
+
 /* End header */
 
 /* Start home */
