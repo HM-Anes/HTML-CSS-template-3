@@ -70,9 +70,6 @@ header .container {
 /* image part */
 header .logo img {
     width: 45px;
-    /* To match the spacing of logo from edges, such as links spacing */
-    position: relative;
-    left: 25px;
 }
 /* links part */
 header .links {
