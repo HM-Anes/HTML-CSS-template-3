@@ -303,3 +303,216 @@ header ul li a:hover {
 
 /* Start consultation */
 /* End consultation */
+
+/* start e-commerce WebSites */
+.websites {
+    padding: var(--padding-section) 0;
+    display: flex;
+    align-items: center;
+    background-color: #3c3c3c;
+}
+.websites .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* text part */
+.websites .text {
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.websites .text h1 {
+    font-size: 60px;
+    font-weight: normal;
+    color: var(--base-col2);
+}
+.websites .text h1 span {
+    font-weight: bold;
+    font-size: 57px;
+}
+/* media quary reducation for small screen */
+@media (max-width: 767px) {
+    .websites .text h1 {
+        font-size: 35px;
+    }
+    .websites .text h1 span {
+        font-size: 31px;
+    }
+}
+.websites .text p {
+    color: #afafaf;
+    line-height: 1.6;
+}
+/* boxes part */
+.websites .boxes {
+    display: flex;
+    margin-top: 63px;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+/* media query */
+@media (max-width: 992px) {
+    .websites .boxes {
+        flex-direction: column;
+        display: flex;
+        gap: 55px;
+    }
+}
+@media (min-width: 1200px) {
+    .websites .boxes {
+        display: flex;
+        gap: 70px;
+    }
+}
+/* three boxes */
+.websites .boxes .box {
+    display: flex;
+    background-color: var(--base-col2);
+    border-radius: 5%;
+    /* align-items: center; (not) because we have paragraph !! check designe */
+    position: relative;
+    justify-content: flex-start;
+    padding: 20px 20px 45px 20px;
+    width: 315px;
+    flex-direction: column;
+    text-align: center;
+}
+/* image part */
+.websites .boxes .box img {
+    width: 219px;
+    height: 219px;
+    border-radius: 50%;
+    position: relative;
+    top: -47px;
+    left: 29px; /*stabilizing photo */
+    margin-bottom: -32px;
+}
+.websites .boxes .box::before {
+    content: " ";
+    background-color: var(--base-col2);
+    position: absolute;
+    z-index: 0;
+    height: 238px;
+    width: 238px;
+    top: -37px;
+    right: 37px;
+    border-radius: 50%;
+}
+
+/* text part */
+.websites .boxes h1 {
+    font-size: 26px;
+}
+.websites .boxes p {
+    font-size: 19px;
+    line-height: 2;
+    text-align: start;
+}
+/* link part */
+.websites .container h2 {
+    color: var(--base-col2);
+    font-weight: normal;
+    font-size: 20px;
+    padding: 20px;
+}
+.websites .container h2 a {
+    color: var(--base-col2);
+}
+
+/* end e-commerce WebSites*/
+/* start today */
+.today {
+    padding: var(--padding-section) 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--base-col1);
+}
+.today .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* text part */
+.today .container .text {
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: var(--base-col2);
+}
+.today .container .text h1 {
+    font-size: 37px;
+    font-weight: 800;
+}
+.today .container .text p {
+    color: #fbabd0;
+    font-size: 16px;
+}
+
+/* 'cases part' */
+.today .container .cases {
+    display: flex;
+    margin-top: 63px;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+    color: var(--base-col2);
+}
+/* media query */
+@media (max-width: 992px) {
+    .today .container .cases {
+        flex-direction: column;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+    }
+}
+@media (min-width: 1200px) {
+    .today .container .cases {
+        display: flex;
+        gap: 200px;
+    }
+}
+
+.today .cases .case {
+    line-height: 50px;
+}
+.today .cases .case p {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* button part */
+/* .today .container button {
+    background-color: var(--base-col2);
+    margin: 45px;
+    border-radius: 10px;
+    padding: 26px;                !!!!!!(i delet button tag in hatml)!!!!!
+    width: 239px;
+    border: solid 2px var(--base-col2);
+    transition: 0.5s;
+} */
+.today .container a {
+    /* start form button */
+    background-color: var(--base-col2);
+    margin: 45px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    border: solid 2px var(--base-col2);
+    transition: 0.5s;
+    /* end form button */
+    /* start text style */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--base-col1);
+    font-size: 18px;
+    letter-spacing: 3px;
+    /* end text style */
+}
+.today .container a:hover {
+    background-color: transparent;
+    color: var(--base-col2);
+}
+/* end today */
