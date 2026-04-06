@@ -477,6 +477,7 @@ header ul li a:hover {
     text-transform: uppercase;
     width: 140px;
 }
+/* media quary */
 @media (max-width: 767px) {
     .consultation .information {
         flex-direction: column;
@@ -496,7 +497,7 @@ header ul li a:hover {
     padding: var(--padding-section) 0;
     display: flex;
     align-items: center;
-    background-color: #3c3c3c;
+    background-color: var(--ourWay-2022);
 }
 .websites .container {
     display: flex;
@@ -509,13 +510,13 @@ header ul li a:hover {
     letter-spacing: 0.5px;
 }
 .websites .text h1 {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: normal;
     color: var(--base-col2);
 }
 .websites .text h1 span {
     font-weight: bold;
-    font-size: 57px;
+    font-size: 60px;
 }
 /* media quary reducation for small screen */
 @media (max-width: 767px) {
@@ -703,3 +704,16 @@ header ul li a:hover {
     color: var(--base-col2);
 }
 /* end today */
+
+/* Start stores */
+
+/* End stores */
+/* Start price  */
+
+/* End price  */
+/* Start percentage */
+
+/* End percentage */
+/* Start company */
+
+/* End company */
