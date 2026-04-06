@@ -4,7 +4,13 @@
     --base-col1: #e93c70;
     --sell-col: #d9d9d9;
     --base-col2: #fefefe;
+    --information-col: #f1f1f1;
     --padding-section: 25px;
+    --font-size: 42px;
+    --ourWay-2019: #e63c6e;
+    --ourWay-2020: #4ebbbd;
+    --ourWay-2021: #5784c0;
+    --ourWay-2022: #313131;
 }
 /* End Variables */
 
@@ -80,7 +86,6 @@ header .links {
 }
 header .links i {
     font-size: 25px;
-    /* To match the spacing of links from edges, such as logo spacing */
     position: relative;
     right: 25px;
 }
@@ -113,6 +118,7 @@ header nav ul {
     align-items: center;
     gap: 10px;
 }
+/* a (links) part */
 header ul li a {
     text-decoration: none;
     color: var(--base-col2);
@@ -143,6 +149,7 @@ header ul li a:hover {
     flex-direction: column;
     gap: 35px;
 }
+/* inside text */
 .home h1 {
     font-weight: normal;
     margin: 0;
@@ -153,6 +160,7 @@ header ul li a:hover {
 .home b a {
     color: black;
 }
+/* read more part */
 .home button {
     background-color: var(--base-col1);
     border: none;
@@ -187,6 +195,7 @@ header ul li a:hover {
 /* start sell */
 .sell {
     padding-bottom: var(--padding-section);
+    background-color: var(--base-col2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +204,7 @@ header ul li a:hover {
     background-color: var(--sell-col);
     font-weight: normal;
     text-align: center;
-    font-size: 42px;
+    font-size: var(--font-size);
     width: 100%;
     margin: auto 0;
     padding: 100px 0;
@@ -209,7 +218,7 @@ header ul li a:hover {
     font-weight: bold;
     font-size: 44px;
 }
-/* Start boxes */
+/* All boxes */
 .sell .boxes {
     display: flex;
     align-items: center;
@@ -218,7 +227,6 @@ header ul li a:hover {
     top: -60px;
     gap: 20px;
 }
-/* All boxes */
 .sell .box {
     display: flex;
     flex-direction: column;
@@ -231,13 +239,6 @@ header ul li a:hover {
     position: relative;
     background-color: var(--base-col2);
     border-radius: 10px;
-}
-.sell .box i {
-    font-size: 50px;
-    margin-top: 60px;
-    position: relative;
-    right: 30px;
-    z-index: 2;
 }
 .sell .box::before {
     content: "";
@@ -264,9 +265,18 @@ header ul li a:hover {
 .sell .box.four::before {
     background-color: #eba872;
 }
+/* inside box */
+.sell .box i {
+    font-size: 50px;
+    margin-top: 60px;
+    position: relative;
+    right: 30px;
+    z-index: 2;
+}
 .sell .box p {
     color: #787878;
 }
+/* Learn more part */
 .sell button {
     background-color: var(--base-col2);
     border: solid 2px;
@@ -299,9 +309,186 @@ header ul li a:hover {
 /* End sell */
 
 /* Start our way */
+.ourWay {
+    padding: var(--padding-section) 0;
+    background-color: var(--base-col2);
+    display: flex;
+    align-items: center;
+}
+.ourWay .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ourWay h1 {
+    font-weight: normal;
+    font-size: var(--font-size);
+}
+/* All boxes */
+.ourWay .boxes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--base-col2);
+    gap: 20px;
+    width: 100%;
+}
+.ourWay .boxes .box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    padding: var(--padding-section);
+}
+/* horizontal boxes */
+.ourWay .boxes .column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 140px;
+    height: 340px;
+}
+/* box one */
+.ourWay .box.one {
+    background-color: var(--ourWay-2019);
+    width: 260px;
+    height: 220px;
+}
+/* box two */
+.ourWay .box.two {
+    background-color: var(--ourWay-2020);
+    width: 35%;
+    height: 100%;
+}
+/* box three */
+.ourWay .box.three {
+    background-color: var(--ourWay-2021);
+    width: 35%;
+    height: 100%;
+}
+/* box four */
+.ourWay .box.four {
+    background-color: var(--ourWay-2022);
+    width: 260px;
+    position: relative;
+    bottom: 280px;
+    height: 220px;
+}
+/* inside box */
+.ourWay .boxes .box h1 {
+    font-weight: bold;
+    margin: auto 0 0 0;
+    font-size: 48px;
+}
+.ourWay .boxes .box p {
+    margin: 0 0 auto 0;
+}
+/* media query */
+@media (max-width: 991px) {
+    .ourWay .boxes .column {
+        justify-content: space-around;
+        bottom: 0;
+    }
+    .ourWay .box.four {
+        bottom: 0;
+    }
+}
+@media (max-width: 767px) {
+    .ourWay .boxes .column {
+        flex-direction: column;
+        height: 680px;
+    }
+    .ourWay .box.two {
+        width: 260px;
+        height: 50%;
+    }
+    .ourWay .box.three {
+        width: 260px;
+        height: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .ourWay {
+        margin-bottom: -200px;
+    }
+}
 /* End our way */
 
 /* Start consultation */
+.consultation {
+    padding: var(--padding-section) 0 calc(var(--padding-section) + 60px) 0;
+    background-color: var(--base-col1);
+    display: flex;
+    align-items: center;
+}
+.consultation .container {
+    display: flex;
+    flex-direction: column;
+}
+/* text part */
+.consultation .text {
+    padding: var(--padding-section) 0;
+    color: var(--base-col2);
+    text-align: center;
+}
+.consultation .text h1 {
+    font-weight: normal;
+    font-size: var(--font-size);
+}
+/* information part */
+.consultation .information {
+    padding: var(--padding-section);
+    background-color: var(--information-col);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 10px;
+}
+/* name,email part */
+.consultation .information .name,
+.consultation .information .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consultation .information label {
+    padding: 8px;
+}
+.consultation .information input {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    height: 45px;
+}
+/* submit button */
+.consultation .information button {
+    border-radius: 5px;
+    padding: 10px;
+    height: 45px;
+    border: none;
+    color: var(--base-col2);
+    background-color: var(--base-col1);
+    text-transform: uppercase;
+    width: 140px;
+}
+@media (max-width: 767px) {
+    .consultation .information {
+        flex-direction: column;
+    }
+    .consultation .information .name,
+    .consultation .information .email {
+        width: 100%;
+    }
+    .consultation .information input {
+        width: 80%;
+    }
+}
 /* End consultation */
 
 /* start e-commerce WebSites */
