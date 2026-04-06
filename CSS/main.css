@@ -11,6 +11,7 @@
     --ourWay-2020: #4ebbbd;
     --ourWay-2021: #5784c0;
     --ourWay-2022: #313131;
+    --p-col: #787878;
 }
 /* End Variables */
 
@@ -60,18 +61,28 @@ ul {
 /* End global rules */
 
 /* Start components */
+/* Learn more a */
+a.learnMore {
+    border: solid 2px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
 /* End components */
 
 /* Start header */
 header {
     padding: var(--padding-section) 0;
     background-color: var(--base-col2);
-    display: flex;
-    align-items: center;
-}
-header .container {
-    display: flex;
-    align-items: center;
 }
 /* image part */
 header .logo img {
@@ -80,8 +91,6 @@ header .logo img {
 /* links part */
 header .links {
     flex: 1; /* to take all valid space */
-    display: flex;
-    align-items: center;
     justify-content: flex-end; /* to put links part in the end of the space */
 }
 header .links i {
@@ -135,13 +144,7 @@ header ul li a:hover {
 /* Start home */
 .home {
     padding: var(--padding-section) 0;
-    display: flex;
-    align-items: center;
     background-color: var(--home-col);
-}
-.home .container {
-    display: flex;
-    align-items: center;
 }
 /* text part */
 .home .text {
@@ -196,9 +199,7 @@ header ul li a:hover {
 .sell {
     padding-bottom: var(--padding-section);
     background-color: var(--base-col2);
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .sell h1 {
     background-color: var(--sell-col);
@@ -210,9 +211,7 @@ header ul li a:hover {
     padding: 100px 0;
 }
 .sell .container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .sell h1 span {
     font-weight: bold;
@@ -220,17 +219,13 @@ header ul li a:hover {
 }
 /* All boxes */
 .sell .boxes {
-    display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
     top: -60px;
     gap: 20px;
 }
 .sell .box {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     text-align: center;
     gap: 30px;
@@ -274,22 +269,12 @@ header ul li a:hover {
     z-index: 2;
 }
 .sell .box p {
-    color: #787878;
+    color: var(--p-col);
 }
 /* Learn more part */
-.sell button {
+.sell a.learnMore {
     background-color: var(--base-col2);
-    border: solid 2px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-}
-.sell button a {
-    text-decoration: none;
-    text-transform: uppercase;
     color: black;
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 /* media query */
 @media (max-width: 767px) {
@@ -312,12 +297,8 @@ header ul li a:hover {
 .ourWay {
     padding: var(--padding-section) 0;
     background-color: var(--base-col2);
-    display: flex;
-    align-items: center;
 }
 .ourWay .container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
 }
 .ourWay h1 {
@@ -326,16 +307,12 @@ header ul li a:hover {
 }
 /* All boxes */
 .ourWay .boxes {
-    display: flex;
-    align-items: center;
     flex-direction: column;
     color: var(--base-col2);
     gap: 20px;
     width: 100%;
 }
 .ourWay .boxes .box {
-    display: flex;
-    align-items: center;
     flex-direction: column;
     text-align: center;
     border-radius: 20px;
@@ -343,8 +320,6 @@ header ul li a:hover {
 }
 /* horizontal boxes */
 .ourWay .boxes .column {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -422,8 +397,6 @@ header ul li a:hover {
 .consultation {
     padding: var(--padding-section) 0 calc(var(--padding-section) + 60px) 0;
     background-color: var(--base-col1);
-    display: flex;
-    align-items: center;
 }
 .consultation .container {
     display: flex;
@@ -443,8 +416,6 @@ header ul li a:hover {
 .consultation .information {
     padding: var(--padding-section);
     background-color: var(--information-col);
-    display: flex;
-    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     border-radius: 10px;
@@ -453,8 +424,6 @@ header ul li a:hover {
 /* name,email part */
 .consultation .information .name,
 .consultation .information .email {
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 .consultation .information label {
@@ -495,20 +464,19 @@ header ul li a:hover {
 /* start e-commerce WebSites */
 .websites {
     padding: var(--padding-section) 0;
-    display: flex;
-    align-items: center;
     background-color: var(--ourWay-2022);
 }
 .websites .container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
 }
 /* text part */
 .websites .text {
+    flex-direction: column;
     text-align: center;
     letter-spacing: 0.5px;
+    margin-bottom: 80px;
 }
+/* inside text */
 .websites .text h1 {
     font-size: 55px;
     font-weight: normal;
@@ -518,28 +486,77 @@ header ul li a:hover {
     font-weight: bold;
     font-size: 60px;
 }
-/* media quary reducation for small screen */
-@media (max-width: 767px) {
-    .websites .text h1 {
-        font-size: 35px;
-    }
-    .websites .text h1 span {
-        font-size: 31px;
-    }
-}
 .websites .text p {
-    color: #afafaf;
+    color: var(--p-col);
     line-height: 1.6;
+    width: 60%;
 }
 /* boxes part */
 .websites .boxes {
-    display: flex;
-    margin-top: 63px;
     justify-content: center;
     gap: 20px;
-    position: relative;
 }
-/* media query */
+/* three boxes */
+.websites .boxes .box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--base-col2);
+    border-radius: 5%;
+    padding: var(--padding-section);
+    position: relative;
+    width: 320px;
+}
+/* image part */
+.websites .box .image {
+    align-self: center;
+}
+.websites .box img {
+    width: 219px;
+    height: 219px;
+    border-radius: 50%;
+    position: relative;
+    top: -45px;
+}
+.websites .boxes .box::before {
+    content: " ";
+    position: absolute;
+    align-self: center;
+    background-color: var(--base-col2);
+    height: 238px;
+    width: 238px;
+    top: -37px;
+    border-radius: 50%;
+}
+/* content part */
+.websites .boxes h1 {
+    font-size: 26px;
+    text-align: center;
+}
+.websites .boxes li {
+    font-size: 19px;
+    line-height: 2;
+}
+/* link part */
+.websites .link h2 {
+    color: var(--base-col2);
+    font-weight: normal;
+    font-size: 20px;
+    padding: 20px;
+}
+.websites .link h2 a {
+    color: var(--base-col2);
+}
+/* media quary */
+@media (max-width: 767px) {
+    /* text part */
+    .websites .text h1 {
+        font-size: 30px;
+    }
+    .websites .text h1 span {
+        font-size: 35px;
+    }
+}
+/* media quary for boxes part */
 @media (max-width: 992px) {
     .websites .boxes {
         flex-direction: column;
@@ -549,159 +566,65 @@ header ul li a:hover {
 }
 @media (min-width: 1200px) {
     .websites .boxes {
-        display: flex;
         gap: 70px;
     }
 }
-/* three boxes */
-.websites .boxes .box {
-    display: flex;
-    background-color: var(--base-col2);
-    border-radius: 5%;
-    /* align-items: center; (not) because we have paragraph !! check designe */
-    position: relative;
-    justify-content: flex-start;
-    padding: 20px 20px 45px 20px;
-    width: 315px;
-    flex-direction: column;
-    text-align: center;
-}
-/* image part */
-.websites .boxes .box img {
-    width: 219px;
-    height: 219px;
-    border-radius: 50%;
-    position: relative;
-    top: -47px;
-    left: 29px; /*stabilizing photo */
-    margin-bottom: -32px;
-}
-.websites .boxes .box::before {
-    content: " ";
-    background-color: var(--base-col2);
-    position: absolute;
-    z-index: 0;
-    height: 238px;
-    width: 238px;
-    top: -37px;
-    right: 37px;
-    border-radius: 50%;
-}
-
-/* text part */
-.websites .boxes h1 {
-    font-size: 26px;
-}
-.websites .boxes p {
-    font-size: 19px;
-    line-height: 2;
-    text-align: start;
-}
-/* link part */
-.websites .container h2 {
-    color: var(--base-col2);
-    font-weight: normal;
-    font-size: 20px;
-    padding: 20px;
-}
-.websites .container h2 a {
-    color: var(--base-col2);
-}
-
 /* end e-commerce WebSites*/
+
 /* start today */
 .today {
-    padding: var(--padding-section) 0;
-    display: flex;
-    align-items: center;
+    padding: var(--padding-section) 0 calc(var(--padding-section) + 60px) 0;
     background-color: var(--base-col1);
 }
 .today .container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
+    gap: 40px;
 }
 /* text part */
-.today .container .text {
+.today .text {
+    flex-direction: column;
     text-align: center;
     letter-spacing: 0.5px;
     color: var(--base-col2);
 }
-.today .container .text h1 {
-    font-size: 37px;
-    font-weight: 800;
+.today .text h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-weight: normal;
 }
-.today .container .text p {
-    color: #fbabd0;
+.today .text p {
+    color: var(--base-col2);
     font-size: 16px;
+    width: 60%;
 }
-
-/* 'cases part' */
-.today .container .cases {
-    display: flex;
-    margin-top: 63px;
-    justify-content: center;
-    gap: 100px;
-    position: relative;
+/* cases part */
+.today .cases {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+.today .case {
     color: var(--base-col2);
 }
-/* media query */
-@media (max-width: 992px) {
-    .today .container .cases {
-        flex-direction: column;
-        display: flex;
-        gap: 2px;
-        align-items: center;
-    }
-}
-@media (min-width: 1200px) {
-    .today .container .cases {
-        display: flex;
-        gap: 200px;
-    }
-}
-
-.today .cases .case {
-    line-height: 50px;
-}
-.today .cases .case p {
+.today .case li {
+    padding: 14px;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
 }
-/* button part */
-/* .today .container button {
-    background-color: var(--base-col2);
-    margin: 45px;
-    border-radius: 10px;
-    padding: 26px;                !!!!!!(i delet button tag in hatml)!!!!!
-    width: 239px;
-    border: solid 2px var(--base-col2);
-    transition: 0.5s;
-} */
-.today .container a {
-    /* start form button */
-    background-color: var(--base-col2);
-    margin: 45px;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    border: solid 2px var(--base-col2);
-    transition: 0.5s;
-    /* end form button */
-    /* start text style */
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--base-col1);
-    font-size: 18px;
-    letter-spacing: 3px;
-    /* end text style */
-}
-.today .container a:hover {
+/* Learn more part */
+.today a.learnMore {
+    border-color: var(--base-col2);
     background-color: transparent;
     color: var(--base-col2);
+}
+/* media query */
+@media (max-width: 767px) {
+    .today .cases {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 /* end today */
 
