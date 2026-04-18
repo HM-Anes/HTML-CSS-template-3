@@ -15,14 +15,14 @@
     </head>
     <body>
         <!-- start header -->
-        <header>
-            <div class="container">
+        <header class="flex">
+            <div class="container flex">
                 <!-- logo part -->
                 <div class="logo">
                     <img src="images/logo.png" alt="Logo" />
                 </div>
                 <!-- links part -->
-                <div class="links">
+                <div class="links flex">
                     <i class="fa-solid fa-bars"></i>
                     <!-- nav bar -->
                     <nav>
@@ -39,8 +39,8 @@
         </header>
         <!-- end header -->
         <!-- Start home -->
-        <div class="home">
-            <div class="container">
+        <div class="home flex">
+            <div class="container flex">
                 <!-- text part -->
                 <div class="text">
                     <h1>We create <span>online shops</span></h1>
@@ -70,16 +70,16 @@
         </div>
         <!-- End home -->
         <!-- Start sell -->
-        <div class="sell">
+        <div class="sell flex">
             <h1>
                 Everything you need<br />
                 <span> to sell product online</span>
             </h1>
-            <div class="container">
+            <div class="container flex">
                 <!-- boxes part -->
-                <div class="boxes">
+                <div class="boxes flex">
                     <!-- box one -->
-                    <div class="box one">
+                    <div class="box one flex">
                         <i class="fa-solid fa-shop"></i>
                         <h3>Customize your online store</h3>
                         <p>
@@ -91,7 +91,7 @@
                         </p>
                     </div>
                     <!-- box two -->
-                    <div class="box two">
+                    <div class="box two flex">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <h3>Run your ecommerce website</h3>
                         <p>
@@ -103,7 +103,7 @@
                         </p>
                     </div>
                     <!-- box three -->
-                    <div class="box three">
+                    <div class="box three flex">
                         <i class="fa-solid fa-laptop-code"></i>
                         <h3>Grow your revenue</h3>
                         <p>
@@ -128,20 +128,18 @@
                     </div>
                 </div>
                 <!-- Learn more part -->
-                <button>
-                    <a href="#">Learn more</a>
-                </button>
+                <a class="learnMore" href="#">Learn more</a>
             </div>
         </div>
         <!-- End sell -->
         <!-- Start our way -->
-        <div class="ourWay">
-            <div class="container">
+        <div class="ourWay flex">
+            <div class="container flex">
                 <h1>Our way</h1>
                 <!-- All boxes -->
-                <div class="boxes">
+                <div class="boxes flex">
                     <!-- box one -->
-                    <div class="box one">
+                    <div class="box one flex">
                         <h1>2019</h1>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -150,7 +148,7 @@
                         </p>
                     </div>
                     <!-- horizontal boxes -->
-                    <div class="column">
+                    <div class="column flex">
                         <!-- box two -->
                         <div class="box two">
                             <h1>2020</h1>
@@ -190,7 +188,7 @@
         </div>
         <!-- End our way -->
         <!-- Start consultation -->
-        <div class="consultation">
+        <div class="consultation flex">
             <div class="container">
                 <!-- text part -->
                 <div class="text">
@@ -202,9 +200,9 @@
                     </p>
                 </div>
                 <!-- information part -->
-                <form class="information">
+                <form class="information flex">
                     <!-- name part  -->
-                    <div class="name">
+                    <div class="name flex">
                         <label for="name">Name</label>
                         <input
                             type="text"
@@ -213,7 +211,7 @@
                         />
                     </div>
                     <!-- email part -->
-                    <div class="email">
+                    <div class="email flex">
                         <label for="email">Email</label>
                         <input
                             type="email"
@@ -228,13 +226,13 @@
         </div>
         <!-- End consultation -->
         <!-- start e-commerce WebSites -->
-        <div class="websites">
-            <div class="container">
+        <div class="websites flex">
+            <div class="container flex">
                 <!-- text part -->
-                <div class="text">
+                <div class="text flex">
                     <h1>
                         Building Beautiful, functional <br />
-                        <span>ecommerce Websites</span>
+                        <span>eCommerce Websites</span>
                     </h1>
                     <p>
                         Natoque penatibus et magnis dis. Blandit aliquam etiam
@@ -243,85 +241,95 @@
                     </p>
                 </div>
                 <!-- box part -->
-                <div class="boxes">
+                <div class="boxes flex">
                     <!-- first box -->
                     <div class="box">
-                        <img src="images/e-commerce.jpg" alt="e-commerce" />
-                        <h1>No-limit Hosting</h1>
-                        <p>
-                            — Any domain name <br />— Unlimited bandwidth<br />—
-                            Diam vel quam<br />— Suspendisse in
-                        </p>
+                        <div class="image">
+                            <img src="images/e-commerce.jpg" alt="e-commerce" />
+                        </div>
+                        <div class="content">
+                            <h1>No-limit Hosting</h1>
+                            <ul>
+                                <li>— Any domain name</li>
+                                <li>— Unlimited bandwidth</li>
+                                <li>— Diam vel quam</li>
+                                <li>— Suspendisse in</li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- secand box -->
                     <div class="box">
-                        <img src="images/basket.jpg" alt="basket" />
-                        <h1>Online Store</h1>
-                        <p>
-                            — Loads of functionality <br />— Account creation<br />—
-                            Customer grouping<br />— Customize a theme
-                        </p>
+                        <div class="image">
+                            <img src="images/basket.jpg" alt="basket" />
+                        </div>
+                        <div class="content">
+                            <h1>Online Store</h1>
+                            <ul>
+                                <li>— Loads of functionality</li>
+                                <li>— Account creation</li>
+                                <li>— Customer grouping</li>
+                                <li>— Customize a theme</li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- third box -->
                     <div class="box">
-                        <img src="images/discount.jpg" alt="discount" />
-                        <h1>Sell Online</h1>
-                        <p>
-                            — Manage inventory<br />— Customer accounts<br />—
-                            Quisque id diam vel<br />— Fringilla urna porttitor
-                        </p>
+                        <div class="image">
+                            <img src="images/discount.jpg" alt="discount" />
+                        </div>
+                        <div class="content">
+                            <h1>Sell Online</h1>
+                            <ul>
+                                <li>— Manage inventory</li>
+                                <li>— Customer account</li>
+                                <li>— Quisque id diam vel</li>
+                                <li>— Fringilla urna porttitor</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- link part -->
-                <h2>
-                    Image from
-                    <a href="https://fr.freepik.com/app">Freepik</a>
-                </h2>
+                <div class="link">
+                    <h2>
+                        Image from
+                        <a href="https://fr.freepik.com/app">Freepik</a>
+                    </h2>
+                </div>
             </div>
         </div>
         <!-- end e-commerce WebSites -->
         <!-- start today -->
-        <div class="today">
-            <div class="container">
+        <div class="today flex">
+            <div class="container flex">
                 <!-- text part -->
-                <div class="text">
+                <div class="text flex">
                     <h1>Get yours today</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor <br />
-                        incididunt ut labore et dolore magna aliqua. Blandit
-                        aliquam etiam erat velit.
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Blandit aliquam etiam erat velit.
                     </p>
                 </div>
                 <!-- cases part -->
-                <div class="cases">
-                    <!-- first case -->
-                    <div class="case">
-                        <p>
-                            &#10004; Development <br />&#10004; App features<br />&#10004;
-                            Prototyping
-                        </p>
-                    </div>
-                    <!-- secand case -->
-                    <div class="case">
-                        <p>
-                            &#10004; Development <br />
-                            &#10004; App features<br />&#10004; Prototyping
-                        </p>
-                    </div>
-                    <!-- third case -->
-                    <div class="case">
-                        <p>
-                            &#10004; Development <br />
-                            &#10004; App features<br />&#10004; Prototyping
-                        </p>
-                    </div>
+                <div class="cases flex">
+                    <ul class="case">
+                        <li>&#10004; Development</li>
+                        <li>&#10004; App features</li>
+                        <li>&#10004; Prototyping</li>
+                    </ul>
+                    <ul class="case">
+                        <li>&#10004; Finance cases</li>
+                        <li>&#10004; web features</li>
+                        <li>&#10004; IT services</li>
+                    </ul>
+                    <ul class="case">
+                        <li>&#10004; 24/7 support</li>
+                        <li>&#10004; Design thinking</li>
+                        <li>&#10004; New product</li>
+                    </ul>
                 </div>
-                <!-- bouton part -->
-
-                <a href="https://www.youtube.com/watch?v=4K00naoeNDE"
-                    >Learn More</a
-                >
+                <!-- Learn more part -->
+                <a class="learnMore" href="#">Learn more</a>
             </div>
         </div>
         <!-- end today -->
