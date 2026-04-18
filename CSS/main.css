@@ -6,12 +6,17 @@
     --base-col2: #fefefe;
     --information-col: #f1f1f1;
     --padding-section: 25px;
-    --font-size: 42px;
+    --font-size: 55px;
     --ourWay-2019: #e63c6e;
     --ourWay-2020: #4ebbbd;
     --ourWay-2021: #5784c0;
     --ourWay-2022: #313131;
     --p-col: #787878;
+}
+@media (max-width: 767px) {
+    :root {
+        --font-size: 36px;
+    }
 }
 /* End Variables */
 
@@ -210,12 +215,12 @@ header ul li a:hover {
     margin: auto 0;
     padding: 100px 0;
 }
-.sell .container {
-    flex-direction: column;
-}
 .sell h1 span {
     font-weight: bold;
-    font-size: 44px;
+    font-size: calc(var(--font-size) + 5px);
+}
+.sell .container {
+    flex-direction: column;
 }
 /* All boxes */
 .sell .boxes {
@@ -478,13 +483,13 @@ header ul li a:hover {
 }
 /* inside text */
 .websites .text h1 {
-    font-size: 55px;
+    font-size: var(--font-size);
     font-weight: normal;
     color: var(--base-col2);
 }
 .websites .text h1 span {
     font-weight: bold;
-    font-size: 60px;
+    font-size: calc((--font-size) + 5px);
 }
 .websites .text p {
     color: var(--p-col);
@@ -494,7 +499,8 @@ header ul li a:hover {
 /* boxes part */
 .websites .boxes {
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 /* three boxes */
 .websites .boxes .box {
@@ -504,7 +510,7 @@ header ul li a:hover {
     border-radius: 5%;
     padding: var(--padding-section);
     position: relative;
-    width: 320px;
+    width: 330px;
 }
 /* image part */
 .websites .box .image {
@@ -546,29 +552,6 @@ header ul li a:hover {
 .websites .link h2 a {
     color: var(--base-col2);
 }
-/* media quary */
-@media (max-width: 767px) {
-    /* text part */
-    .websites .text h1 {
-        font-size: 30px;
-    }
-    .websites .text h1 span {
-        font-size: 35px;
-    }
-}
-/* media quary for boxes part */
-@media (max-width: 992px) {
-    .websites .boxes {
-        flex-direction: column;
-        display: flex;
-        gap: 55px;
-    }
-}
-@media (min-width: 1200px) {
-    .websites .boxes {
-        gap: 70px;
-    }
-}
 /* end e-commerce WebSites*/
 
 /* start today */
@@ -587,8 +570,9 @@ header ul li a:hover {
     letter-spacing: 0.5px;
     color: var(--base-col2);
 }
+/* inside text part */
 .today .text h1 {
-    font-size: 55px;
+    font-size: var(--font-size);
     margin-bottom: 20px;
     font-weight: normal;
 }
@@ -602,9 +586,6 @@ header ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    width: 80%;
-}
-.today .case {
     color: var(--base-col2);
 }
 .today .case li {
@@ -621,18 +602,210 @@ header ul li a:hover {
 }
 /* media query */
 @media (max-width: 767px) {
+    /* text part */
+    .today .text p {
+        width: 80%;
+    }
+    /* cases part */
     .today .cases {
         flex-direction: column;
         align-items: flex-start;
     }
 }
+@media (min-width: 767px) {
+    /* cases part */
+    .today .cases {
+        width: 80%;
+    }
+}
 /* end today */
 
 /* Start stores */
-
+.stores {
+    padding: var(--padding-section) 0 calc(var(--padding-section) + 60px) 0;
+    background-color: var(--base-col2);
+}
+.stores .container {
+    flex-direction: column;
+    gap: 20px;
+}
+/* text part */
+.stores .text {
+    text-align: center;
+    padding: var(--padding-section);
+}
+/* inside part */
+.stores .text h1 {
+    font-weight: normal;
+    font-size: var(--font-size);
+}
+.stores .text h1 span {
+    font-weight: bold;
+    font-size: calc((--font-size) + 5px);
+}
+/* boxes part */
+.stores .boxes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+/* All boxes */
+.stores .boxes .box {
+    flex-direction: column;
+    position: relative;
+    padding: var(--padding-section) 0;
+    width: 330px;
+}
+/* image part */
+.stores .box .image {
+    position: absolute;
+    transform: translateY(-30%);
+    border-radius: 50%;
+    height: 166px;
+    width: 166px;
+    background-color: var(--base-col2);
+    justify-content: center;
+}
+.stores .box img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+/* content part */
+.stores .box .content {
+    color: var(--base-col2);
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+    padding: var(--padding-section);
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+.stores .boxes .box:nth-child(1) .content {
+    background-color: var(--ourWay-2021);
+}
+.stores .boxes .box:nth-child(2) .content {
+    background-color: var(--ourWay-2020);
+}
+.stores .boxes .box:nth-child(3) .content {
+    background-color: var(--base-col1);
+}
+.stores .box .content h3 {
+    padding: var(--padding-section);
+}
 /* End stores */
-/* Start price  */
 
+/* Start price  */
+.price {
+    display: flex;
+    align-items: center;
+    background-color: var(--ourWay-2022);
+    padding: var(--padding-section) 0;
+}
+.price .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* text part */
+.price .text {
+    display: flex;
+    align-items: center;
+    color: var(--base-col2);
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.price .text h1 {
+    font-size: var(--font-size);
+    font-weight: normal;
+}
+.price .text span {
+    font-size: calc((--font-size) + 5px);
+    font-weight: bold;
+}
+.price .text p {
+    font-style: italic;
+    width: 75%;
+}
+/* boxes part */
+.price .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+/* all boxes */
+.price .boxes .box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5%;
+    padding: 0 var(--padding-section) var(--padding-section);
+    gap: 50px;
+    width: 330px;
+}
+.price .boxes .box:nth-child(1) {
+    background-color: var(--ourWay-2021);
+    color: var(--ourWay-2021);
+}
+.price .boxes .box:nth-child(2) {
+    background-color: var(--ourWay-2020);
+    color: var(--ourWay-2020);
+}
+.price .boxes .box:nth-child(3) {
+    background-color: var(--ourWay-2019);
+    color: var(--ourWay-2019);
+}
+/* the prices */
+.price .box .price {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    border-radius: 7px;
+    background-color: var(--base-col2);
+    transform: translateY(-24px);
+    box-shadow: 7px 7px 20px 0 var(--ourWay-2022);
+    padding: 40px 0;
+}
+.price .box:nth-child(1) .price {
+    border-top: solid 7px var(--ourWay-2021);
+}
+.price .box:nth-child(2) .price {
+    border-top: solid 7px var(--ourWay-2020);
+}
+.price .box:nth-child(3) .price {
+    border-top: solid 7px var(--ourWay-2019);
+}
+.price .price p {
+    font-size: 20px;
+}
+.price .price h1 {
+    font-size: var(--font-size);
+    margin: 0;
+}
+/* features */
+.price .box .features {
+    transform: translateY(-24px);
+    color: var(--base-col2);
+    text-align: center;
+}
+.price .features ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--base-col2);
+}
+/* Buy Now part */
+.price .box a {
+    transform: translateY(-24px);
+    background-color: var(--base-col2);
+    border: none;
+    color: var(--ourWay-2022);
+}
 /* End price  */
 /* Start percentage */
 
