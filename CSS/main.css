@@ -712,8 +712,124 @@ header ul li a:hover {
 
 /* End price  */
 /* Start percentage */
+.percentage {
+    padding: var(--padding-section) 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--base-col2);
+}
 
+.percentage .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.percentage .container .text {
+    padding: 30px;
+    width: 672px;
+    position: relative;
+    right: 185px;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 998px) {
+    .percentage .container .text {
+        padding: 36px;
+        width: 328px;
+        font-size: 14px;
+        right: 42px;
+    }
+}
+.percentage .container .percentagepart {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;
+}
+@media (max-width: 998px) {
+    .percentage .container .percentagepart {
+        flex-direction: column;
+        gap: 70px;
+    }
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+.circle.red {
+    width: 300px;
+    height: 300px;
+    border: 15px solid #dc143c;
+    color: #dc143c;
+    font-size: 95px;
+}
+.circle.blue {
+    width: 200px;
+    height: 200px;
+    border: 15px solid steelblue;
+    color: steelblue;
+    font-size: 60px;
+}
+
+.circle.green {
+    width: 140px;
+    height: 140px;
+    border: 15px solid rgb(65 193 193);
+    color: rgb(65 193 193);
+    font-size: 43px;
+}
 /* End percentage */
 /* Start company */
+.company {
+    padding: var(--padding-section) 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--base-col1);
+}
+.company .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.company .container .text h1 {
+    text-align: center;
+    font-size: 61px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: var(--base-col2);
+}
+.company .container .text h1 span {
+    font-weight: bold;
+    font-size: 63px;
+}
+.company .container .logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 60px;
+    padding-top: 20px;
+}
+@media (max-width: 998px) {
+    .company .container .logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+    }
+    .company .container .text h1 {
+        font-size: 29px;
+    }
+    .company .container .text h1 span {
+        font-size: 41px;
+    }
+}
+.company .container .logos img {
+    width: 130px;
+}
 
 /* End company */
